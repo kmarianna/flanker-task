@@ -1,0 +1,64 @@
+import java.awt.GridLayout;
+
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+
+public class DemoDatenUI 
+{
+
+//	public DemoDatenUI ()
+//	{
+//		_hauptPanelDemo = erstellePanelDemo();
+//	}
+	
+	public static void erstellePanelDemo()
+	{
+		JFrame frame = new JFrame();
+		frame.setTitle("Daten");
+		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		frame.setContentPane(panel);
+		
+		GridLayout demoLayout = new GridLayout(3, 2);
+		panel.setLayout(demoLayout);
+
+		
+		JLabel alterLabel = new JLabel("Alter");
+	    panel.add(alterLabel);
+	    JLabel vpnrLabel = new JLabel("VP Nummer");
+	    panel.add(vpnrLabel);
+	    
+	    JTextField alterText = new JTextField();
+	    panel.add(alterText);
+	    panel.add(Box.createVerticalStrut(0));
+	    JTextField vpnrText = new JTextField();
+	    panel.add(vpnrText);
+	    
+	    JButton okButton = new JButton("OK");
+		frame.getContentPane().add(okButton);
+		
+	    frame.setVisible(true);
+	    
+	}
+	
+	public static void main(String[] args) 
+	{
+		javax.swing.SwingUtilities.invokeLater(new Runnable() 
+		{
+			public void run() 
+			{
+				erstellePanelDemo();
+			}
+			
+		});
+	}
+}

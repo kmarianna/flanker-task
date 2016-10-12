@@ -1,0 +1,32 @@
+//	import java.awt.BorderLayout;
+//	import java.awt.Frame;
+//		
+//	import javax.swing.BorderFactory;
+	import javax.swing.JButton;
+	import javax.swing.JFrame;
+//	import javax.swing.JLabel;
+	import javax.swing.JPanel;
+		
+		public class FlankerTaskUI {
+		
+			private static void createAndShowGUI() {
+			 JFrame frame = new JFrame("ButtonFrame");
+			 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			 //frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+			 frame.setUndecorated(true);
+			 
+			
+			 JPanel contentPanel = new JPanel();
+			 frame.setContentPane(contentPanel);
+			 JButton cancelButton = new JButton("Cancel");
+			 frame.getContentPane().add(cancelButton);
+			 frame.setVisible(true);
+			}
+			
+			public static void main(String[] args) {
+	//			public void run() {
+	                createAndShowGUI();
+	//            }
+			}
+		}
+		

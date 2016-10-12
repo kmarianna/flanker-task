@@ -1,0 +1,68 @@
+import java.awt.GridBagLayout;
+
+//import javax.swing.Box;
+//import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+
+
+public class DemoDatenUI 
+{
+
+//	public DemoDatenUI ()
+//	{
+//		_hauptPanelDemo = erstellePanelDemo();
+//	}
+	
+	public static void erstellePanelDemo()
+	{
+		JFrame frame = new JFrame();
+		frame.setTitle("Daten");
+		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JPanel panel = new JPanel();
+		frame.setContentPane(panel);
+		
+		GridBagLayout demoLayout = new GridBagLayout();
+		panel.setLayout(demoLayout);
+
+		
+		JLabel alterLabel = new JLabel("Alter");
+		alterLabel.setHorizontalAlignment(2);
+	    panel.add(alterLabel);
+	    JTextField alterText = new JTextField(15);
+	    panel.add(alterText);
+	    
+	    JLabel vpnrLabel = new JLabel("VP Nummer");
+//	    vpnrLabel.setHorizontalAlignment(5);
+	    panel.add(vpnrLabel);
+	    JTextField vpnrText = new JTextField(15);
+	    panel.add(vpnrText);
+	    
+//	    panel.add(Box.createVerticalStrut(0));
+	    
+	    
+	    JButton okButton = new JButton("OK");
+	    frame.getContentPane().add(okButton);
+	  
+		frame.setVisible(true);
+	    
+	}
+	
+	public static void main(String[] args) 
+	{
+		javax.swing.SwingUtilities.invokeLater(new Runnable() 
+		{
+			public void run() 
+			{
+				erstellePanelDemo();
+			}
+			
+		});
+	}
+}

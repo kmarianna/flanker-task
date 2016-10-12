@@ -1,0 +1,41 @@
+import javax.swing.*;
+
+public class ButtonFrame {
+
+    private static void createAndShowGUI() {
+        // Fenster mit Titel erstellen
+        JFrame frame = new JFrame("ButtonFrame");
+
+	// Aendern des Fensterverhaltens bei Klick auf Schließen-Button
+	// Stadardoperation waere verstecken des Fensters
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+	// Erstellen eines neuen JPanels, das als Standard den 
+	// FlowLayout Manager verwendet
+	JPanel contentPanel = new JPanel();
+	// JPanel als Content Pane festlegen
+	frame.setContentPane(contentPanel);
+	
+	// Buttons erzeugen und zum Content Pane hinzufügen
+	JButton okButton = new JButton("OK");
+	JButton cancelButton = new JButton("Cancel");
+	JButton blaButton = new JButton("Bla");
+    frame.getContentPane().add(okButton);
+	frame.getContentPane().add(cancelButton);
+	frame.getContentPane().add(blaButton);
+
+        //Fenster anzeigen
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        // Aufgrund von Thread-Sicherheit sollte die Methode vom 
+	// event-dispatching Thread aufgerufen werden
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            public void run() {
+                createAndShowGUI();
+            }
+        });
+    }
+}

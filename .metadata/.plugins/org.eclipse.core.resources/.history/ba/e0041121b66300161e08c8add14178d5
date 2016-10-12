@@ -1,0 +1,15 @@
+	import java.awt.BorderLayout;
+	import java.awt.Frame;
+	
+	import javax.swing.BorderFactory;
+	import javax.swing.JFrame;
+	import javax.swing.JLabel;
+	import javax.swing.JPanel;
+	
+	public class FlankerTaskUI {
+	
+		private void createAndShowGUI() {
+		 JFrame frame = new JFrame("ButtonFrame");
+		 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		}
+	}

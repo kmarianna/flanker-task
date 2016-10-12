@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;vpNummerLabel&apos; in &apos;DemoDatenUI.erstellePanelDemo()&apos; to &apos;vpnrLabel&apos;&#x0D;&#x0A;- Original project: &apos;Flanker-task&apos;&#x0D;&#x0A;- Original element: &apos;DemoDatenUI.erstellePanelDemo().vpNummerLabel&apos;&#x0D;&#x0A;- Renamed element: &apos;vpNummerLabel&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;vpNummerLabel&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{DemoDatenUI.java[DemoDatenUI~erstellePanelDemo@vpNummerLabel!670!716!677!689!QJLabel;!0!false" name="vpnrLabel" references="true" stamp="1471530647447" version="1.0"/>
+</session>
